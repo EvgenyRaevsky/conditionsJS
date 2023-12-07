@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 400 16px/1.5 sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    width: 65%;
+    min-height: 125px;
+    background-color: #00000050;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+.task {
+    background-color: #00000050;
+    width: 35%;
+    height: max-content;
+    padding: 1%;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.task:hover {
+    background-color: #00000070;
+}
+
+.task::before {
+    content: '';
+    position: absolute;
+    left: -75px;
+    top: 0;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 7px;
+    background-color: #00000050;
+}
+
+.task:hover::before {
+    background-color: #00000070;
+}
+
+.active::before {
+    background-color: #00000050;
+}
+
+.task_one::before {
+    content: 'Task 1';
+}
+
+.task_two::before {
+    content: 'Task 2';
+}
+
+.task_three::before {
+    content: 'Task 3';
+}
+
+.task_four::before {
+    content: 'Task 4';
+}
+
+.task_five::before {
+    content: 'Task 5';
+}
